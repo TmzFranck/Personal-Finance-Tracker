@@ -1,0 +1,7 @@
+date,amount,category,description
+2020-01-01,1000,Income,McDonalds
+2020-01-01,100,Depenses,Train ticket
+2020-01-02,2000,Income,Restaurant
+2020-01-02,200,Depenses,Bus ticket
+2020-01-03,3000,Depenses,Restaurant
+2020-01-03,300,Income,Train ticket
