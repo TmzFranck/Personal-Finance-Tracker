@@ -7,14 +7,14 @@ class FinanceTracker:
     def add_transaction(self, transaction):
         self.data_manager.save_transactions(transaction)
     
-    
-    def remove_transaction(self, index):
-        df = pd.read_csv(self.data_manager.transaction_file)
-        df = df.drop(df.index[index - 1])
-        df.to_csv(self.data_manager.transaction_file, index=False)
-    
     def generate_report(self):
-        transactions = self.data_manager.load_transactions()
+        plt.rcParams["figure.figsize"] = [7.50, 3.50]
+        plt.rcParams["figure.autolayout"] = True
         
-        # TODO: generate a report with the following information:
+        df = pd.read_csv(self.data_manager.transaction_file)
+        df['amount'] = pd.to_numeric(df['amount'], errors='coerce')
+        df = df.dropna(subset=['amount'])
+        df.groupby('category')['amount'].sum().plot(kind='bar')
+
+        plt.show()
     
