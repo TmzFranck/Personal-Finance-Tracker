@@ -7,10 +7,10 @@ class Transaction:
         
         
     def to_dict(self):
-        return {
+        return [{
             "date": self.date,
             "amount": self.amount,
             "category": self.category,
             "description": self.description
-        }
+        }]
         

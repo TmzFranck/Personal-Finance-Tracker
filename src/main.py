@@ -35,8 +35,8 @@ def get_date():
             
         
 def get_transaction(date, amount, category, description):
-    Transaction = Transaction(date, amount, category, description)
-    return Transaction.to_dict()
+    transaction = Transaction(date, amount, category, description)
+    return transaction.to_dict()
     
     
 def main():
