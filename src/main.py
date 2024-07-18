@@ -19,11 +19,13 @@ def main():
     #data_manager.save_transactions(transactions)
     #print(data_manager.load_transactions())
     
-    finance_tracker = FinanceTracker(data_manager)
+    #finance_tracker = FinanceTracker(data_manager)
     
     #finance_tracker.remove_transaction(('2020-01-01', 100, 'income', 'birthday gift'))
     
-    finance_tracker.generate_report()
+    #finance_tracker.generate_report()
+    
+    print(data_manager.load_transactions('2020-01-01', '2020-01-02'))
     
     
 if __name__ == '__main__':
