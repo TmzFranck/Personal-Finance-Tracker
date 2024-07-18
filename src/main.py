@@ -1,6 +1,7 @@
 from data_manager import DataManager
 from finance_tracker import FinanceTracker
 from datetime import datetime
+from transaction import Transaction
 
 
 def get_amount():
@@ -34,7 +35,8 @@ def get_date():
             
         
 def get_transaction(date, amount, category, description):
-    return [{'date': date, 'amount': amount, 'category': category, 'description': description}]
+    Transaction = Transaction(date, amount, category, description)
+    return Transaction.to_dict()
     
     
 def main():
